@@ -5,6 +5,7 @@ main = do
   print(maximum' arr)
   print(replicate' 10 1)
   print(replicate' 0 1)
+  print(take' 3 [1,2,3,4,5,6,7,8])
   
 
 quicksort :: (Ord a) => [a] -> [a]
@@ -23,3 +24,9 @@ replicate' :: Int -> a -> [a]
 replicate' n x
   | n <= 0  = []
   | otherwise = x : replicate' (n - 1) x
+
+take' :: Int -> [a] -> [a]
+take' n _
+  | n <= 0 = []
+take' _ [] = []
+take' n (x:xs) = x : take' (n-1) xs
