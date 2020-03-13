@@ -6,6 +6,7 @@ main = do
   print(replicate' 10 1)
   print(replicate' 0 1)
   print(take' 3 [1,2,3,4,5,6,7,8])
+  print(reverse' [1,2,3,4,3,2,4,5,6,7])
   
 
 quicksort :: (Ord a) => [a] -> [a]
@@ -30,3 +31,7 @@ take' n _
   | n <= 0 = []
 take' _ [] = []
 take' n (x:xs) = x : take' (n-1) xs
+
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x:xs) = reverse' xs ++ [x]
