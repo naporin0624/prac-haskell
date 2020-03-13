@@ -8,6 +8,7 @@ main = do
   print(take' 3 arr)
   print(reverse' arr)
   print(zip' arr (reverse arr))
+  print(elem' (-8) arr)
 
 
 quicksort :: (Ord a) => [a] -> [a]
@@ -41,3 +42,9 @@ zip' :: [a] -> [b] -> [(a, b)]
 zip' _ [] = []
 zip' [] _ = []
 zip' (x:xs) (y:ys) = (x, y) : zip' xs ys
+
+elem' :: (Eq a) => a -> [a] -> Bool
+elem' a [] = False
+elem' a (x:xs)
+  | a == x = True
+  | otherwise = elem' a xs
