@@ -6,7 +6,12 @@
     // Use 'settings' to set *default* container specific settings.json values on container create. 
     // You can edit these settings after create using File > Preferences > Settings > Remote.
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "haskell.hlint.run": "onType",
+        "haskell.hlint.executablePath": "hlint",
+        "haskell.hlint.logLevel": "info",
+        "stylishHaskell.commandLine": "stylish-haskell",
+        "stylishHaskell.runOnSave": true
     },
     
     // Use 'appPort' to create a container with published ports. If the port isn't working, be sure
@@ -21,7 +26,10 @@
     
     // Add the IDs of extensions you want installed when the container is created in the array below.
     "extensions": [
-        "alanz.vscode-hie-server",
-        "formulahendry.code-runner"
-    ]
+		"alanz.vscode-hie-server",
+		"formulahendry.code-runner",
+		"vigoo.stylish-haskell",
+		"lunaryorn.hlint",
+		"hoovercj.haskell-linter"
+	]
 }
